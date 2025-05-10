@@ -17,9 +17,6 @@ def index():
 def detect_emotion():
     data = request.get_json()
 
-    if "text_to_analyze" not in data:
-        return jsonify({"error": "Missing 'text_to_analyze' in request"}), 400
-
     # missing input case
     if "text_to_analyze" not in data:
         return jsonify({"error": "Missing 'text_to_analyze' in request"}), 400
